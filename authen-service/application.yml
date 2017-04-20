@@ -1,0 +1,22 @@
+server:
+  port: 9999
+
+app:
+  oauth2Clients:
+    -
+      id: test-service
+      resourceIds:
+        - test-service
+      secret: '{cipher}7d4462e15eef9f82cf23cb9cda46f98fe25ca42e2826e04bd03e4c8feecefe25'
+      autoApprove: true
+      authorizedGrantTypes:
+        - client_credentials
+        - refresh_token
+      scopes:
+        - operation
+      tokenValidatePeriod: 12000
+
+keystore:
+  keystoreName: mytest.jks
+  keystorePincode: '{cipher}9a202e040fe5fc4d4e8f8c1edd52d9920f344535acfd8eb0e4f9a8db657d84be'
+  keyEntryName: mytest
