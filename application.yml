@@ -3,13 +3,16 @@ logging:
     com.netflix.discovery.TimedSupervisorTask: "OFF"
     org.springframework.security: DEBUG 
 
-# app:
-#   oauth2:
-#     accessTokenUri: http://authen:9999/oauth/token
-#     clientId: common-service
-#     resourceId: common-service
-#     secret: '{cipher}ec505f8be529a215962a0009bd94880a3bac8d9dc9d57c4b50f7a84ab22d4123f85e3bf567d3770f4175f140f032358c'
+app:
+  oauth2:
+    accessTokenUri: http://localhost:9999/uaa/oauth/token
+    clientId: test-service
+    secret: '{cipher}7d4462e15eef9f82cf23cb9cda46f98fe25ca42e2826e04bd03e4c8feecefe25'
 
+jwtKeyValue: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuekEV9p8ylVaLqiVr9zCU+veKoeY+18wMDeos/pb5bd1R3Pw/xcMVhB6fCHbTqVXtQzJc4anWBlHNzewQZV1zkJvRrVD2OdUZ4HZfbYLvmRvEAIjPbybEMjlYVM9/hZjBK0SqEgcfQ0IKOJONXJoJRqDDpD826G6wkW67xdE83nbRFZaCzIwVuJP9cwETdoObAAgkDQos/5xIQy69mQbuI4/9vmTtsY3hF7pSvK3uIvFr9wLsDg83aPKm6o/pnrU9z2NfFxjbFIUBnWv6z7UUs5UHGGwqCjiRFlBOGR5NcZ0Clzg4w8akX77AlhJioqdvn8N5Nuv3p7EmRGTDQdKkwIDAQAB
+          -----END PUBLIC KEY-----
 eureka:
   client:
     serviceUrl:
