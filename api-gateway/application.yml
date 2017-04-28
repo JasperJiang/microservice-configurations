@@ -1,0 +1,14 @@
+server:
+  port: 9999
+
+
+zuul:
+  sensitiveHeaders:
+  ignoredServices: '*'
+  routes:
+    uaa:
+      path: /uaa/**
+      serviceId: authen-service
+    resource-service:
+      path: /resource-service/**
+      serviceId: resource-service
