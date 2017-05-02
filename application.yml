@@ -20,4 +20,3 @@ eureka:
   instance:
      leaseRenewalIntervalInSeconds: 5
      preferIpAddress: true
-     instanceId: ${random.value}:${spring.application.name}:${server.port}
