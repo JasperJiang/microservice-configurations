@@ -12,3 +12,6 @@ zuul:
     resource-service:
       path: /resource-service/**
       serviceId: resource-service
+    test-client:
+      path: /test-client/**
+      serviceId: test-client
