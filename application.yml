@@ -5,7 +5,7 @@ logging:
 
 app:
   oauth2:
-    accesstokenUrl: http://localhost:9999/uaa/oauth/token
+    accesstokenUrl: http://apigateway:9999/uaa/oauth/token
     common:
       clientId: test-service
       secret: '{cipher}7d4462e15eef9f82cf23cb9cda46f98fe25ca42e2826e04bd03e4c8feecefe25'
