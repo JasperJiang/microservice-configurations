@@ -5,9 +5,12 @@ logging:
 
 app:
   oauth2:
-    accessTokenUri: http://localhost:9999/uaa/oauth/token
-    clientId: test-service
-    secret: '{cipher}7d4462e15eef9f82cf23cb9cda46f98fe25ca42e2826e04bd03e4c8feecefe25'
+    accesstokenUrl: http://localhost:9999/uaa/oauth/token
+    common:
+      clientId: test-service
+      secret: '{cipher}7d4462e15eef9f82cf23cb9cda46f98fe25ca42e2826e04bd03e4c8feecefe25'
+      scope: operation
+
 
 jwtKeyValue: |
           -----BEGIN PUBLIC KEY-----
@@ -16,7 +19,7 @@ jwtKeyValue: |
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka:8761/eureka/
   instance:
      leaseRenewalIntervalInSeconds: 5
      preferIpAddress: true
