@@ -1,2 +1,5 @@
 server:
   port: 0
+
+oauth2:
+  resourceId: resource-service
